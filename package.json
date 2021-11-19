@@ -1,22 +1,30 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-express-nuxt-app",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Electron & Express & Nuxt.js",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "cd src/nuxtjs && yarn build && yarn generate && cd ../../ && yarn build",
+    "build": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "karuhi",
   "devDependencies": {
-    "electron": "^16.0.0"
+    "electron": "^16.0.0",
+    "electron-builder": "^22.13.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "build": {
+    "appId": "work.karuhi.app.test",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
