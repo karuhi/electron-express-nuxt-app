@@ -11,7 +11,7 @@
   "author": "karuhi",
   "devDependencies": {
     "electron": "^16.0.0",
-    "electron-builder": "^22.13.1"
+    "electron-builder": "^22.14.13"
   },
   "dependencies": {
     "cors": "^2.8.5",
